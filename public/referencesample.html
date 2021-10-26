@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Cloud Marsh</title>
+
+  <!-- Material Design Theming -->
+  
+
+
+  <link rel="stylesheet" href="login.css">
+
+  <!-- Import and configure the Firebase SDK -->
+  <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+  <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+  <script src="/__/firebase/9.1.3/firebase-app-compat.js"></script>
+  <script src="/__/firebase/9.1.3/firebase-auth-compat.js"></script>
+  <script src="/__/firebase/init.js?useEmulator=true"></script>
+
+  <script type="text/javascript" src="sample.js">
+
+  </script>
+</head>
+<body>
+<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+  <!-- Header section containing title -->
+  <header class="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
+    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+      <div class="toptitle">
+        <a href="/"><h3>Cloud Marsh Login Portal</h3></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="login-main">
+    
+      <!-- Container for the demo -->
+      <div class="login-container">
+        <div class="login-box">
+          <h2 class="login-title">Cloud Marsh Email &amp; Password Authentication</h2>
+        </div>
+        <div class="login-guide">
+          <p>Enter your email to sign in or sign up</p>
+
+          <input class="login-input" style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
+          &nbsp;&nbsp;&nbsp;
+          <input class="login-input" style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Password"/>
+          <br/><br/>
+          <button disabled class="login-button" id="cloudmarsh-sign-in" name="signin">Sign In</button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="login-button" id="cloudmarsh-sign-up" name="signup">Sign Up</button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="login-button" disabled id="cloudmarsh-verify-email" name="verify-email">Send Email Verification</button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="login-button" id="cloudmarsh-password-reset" name="verify-email">Send Password Reset Email</button>
+
+          <!-- Container where we'll display the user details -->
+          <div class="status-container" >
+            Cloud Marsh: <span id="cloudmarsh-sign-in-status">Unknown</span>
+            <div style="visibility: hidden;">Cloud Marsh auth <code>currentUser</code> object value:</div>
+            <pre><code style="visibility: hidden;" id="cloudmarsh-account-details">null</code></pre>
+          </div>
+        </div>
+      </div>
+
+    
+  </main>
+</div>
+</body>
+</html>
